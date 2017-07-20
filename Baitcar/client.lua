@@ -5,6 +5,7 @@ local isInBaitCar = false
 RegisterNetEvent("simp:baitCarDisable")
 AddEventHandler("simp:baitCarDisable", function()
 	local ped_l = GetPlayerPed(-1)
+	local veh = GetVehiclePedIsIn(GetPlayerPed(-1))
 	if IsPedInAnyVehicle(ped_l, false) then
 			SetVehicleDoorShut(veh, 0, true)
 			SetVehicleDoorShut(veh, 1, true)
@@ -14,9 +15,10 @@ AddEventHandler("simp:baitCarDisable", function()
 			SetVehicleDoorShut(veh, 5, true)
 			TaskVehicleTempAction(ped_l, veh, 27, 5000)
 			PlaySoundFrontend(-1, "Event_Message_Purple", "GTAO_FM_Events_Soundset", 1)
-			isInBaitCar = true;
-			SetVehicleEngineOn(GetVehiclePedIsIn(GetPlayerPed(-1), false), false)
-			SetVehicleDoorsLocked(GetVehiclePedIsIn(GetPlayerPed(-1), false), 4)
+			isInBaitCar = true
+			SetVehicleEngineHealth(veh, 0)
+			SetVehicleEngineOn(veh, false), false)
+			SetVehicleDoorsLocked(veh, false), 4)
 			SetNotificationTextEntry("STRING")
 			AddTextComponentString('~r~WARNING:~s~~n~You are currently inside of a Bait Car, You will be placed under arrest shortly.')
 			DrawNotification(true, true)
@@ -26,8 +28,10 @@ end)
 RegisterNetEvent("simp:baitCarunlock")
 AddEventHandler("simp:baitCarunlock", function()
 	local ped_l = GetPlayerPed(-1)
+	local veh = GetVehiclePedIsIn(GetPlayerPed(-1))
 	if IsPedInAnyVehicle(ped_l, false) then
 			isInBaitCar = false;
+			SetVehicleEngineHealth(veh, 150.0)
 			SetVehicleEngineOn(GetVehiclePedIsIn(GetPlayerPed(-1), false), true)
 			SetVehicleDoorsLocked(GetVehiclePedIsIn(GetPlayerPed(-1), false), 2)
 			SetVehicleDoorsLocked(GetVehiclePedIsIn(GetPlayerPed(-1), true), 1)
