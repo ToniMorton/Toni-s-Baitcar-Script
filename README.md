@@ -23,3 +23,7 @@ you will need to add that part in to meet your needs as i don't feel like spendi
 
 INSTALL:
 This is Standalone and uses no other scripts, just download it and throw it into your server's resources. 
+
+
+
+If you have any Questions and or comments or would like to make a request for a script to be made for you please contact me on my public discord : https://discord.gg/cUgQbRb
