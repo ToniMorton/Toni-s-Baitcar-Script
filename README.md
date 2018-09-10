@@ -2,7 +2,7 @@
 A simple lua script for FiveM that allows police to shutdown cars as "Bait-cars"
 
 
-Created By ToniMorton for https://simplicity-studios.ml Released to the FiveM forums for everyone to enjoy. 
+Created By ToniMorton & Released to the FiveM forums for everyone to enjoy. 
 
 
 If you use this, Please Credit me somewhere <3 
@@ -26,4 +26,4 @@ This is Standalone and uses no other scripts, just download it and throw it into
 
 
 
-If you have any Questions and or comments or would like to make a request for a script to be made for you please contact me on my public discord : https://discord.gg/cUgQbRb
+If you have any Questions and or comments or would like to make a request for a script to be made for you please contact me on my public discord : https://discord.gg/bNwxcVw
